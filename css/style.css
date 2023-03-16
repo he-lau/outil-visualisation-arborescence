@@ -1,0 +1,157 @@
+table, tr, td {
+  text-align: center;
+
+}
+
+tr:hover {
+  background-color: #eff;
+  cursor: pointer;
+}
+
+table tr:first-child {
+  pointer-events: none !important;
+}
+
+table .selected-item {  
+  background-color: #eff !important;
+}
+
+#lien-pagination {
+	display: flex;              /* Transformation en flexbox */
+	padding:0;                  /* Suppression des marges internes */
+}
+
+#lien-pagination li {
+    list-style-type: none ;       /* Suppression des puces */
+		margin: 6px;
+}
+
+#lien-pagination a {
+    display:block;                /* Transformation en block */
+}
+
+
+body {
+  font-size: 1em
+}
+.splitter {
+    width: 100%;
+    min-height: 90% !important;
+    height: 90%;
+    display: flex;
+}
+
+#separator {
+    cursor: col-resize;
+    background-color: #aaa;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='30'><path d='M2 0 v30 M5 0 v30 M8 0 v30' fill='none' stroke='black'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10px;
+    height: 100%;
+
+    /* Prevent the browser's built-in drag from interfering */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#first {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  min-width: 0%;
+  width: 30%;
+  overflow-y: scroll;
+  font-size: 0.8em;
+}
+
+#second {
+  background-color: #eee;
+  width: 100%; /* Set the width to 100% to make the #second element as wide as possible */
+  height: 100%;
+  overflow: auto;
+}
+
+/* Style the option bar */
+ .option-bar {
+   font-size: 0.8em;
+   display: flex;
+   align-items: center;
+   height: 50px;
+   background-color: #333;
+   color: #fff;
+   padding: 0 20px;
+   justify-content:space-between;
+
+ }
+
+ /* Style the button */
+ .option-bar input {
+   background: none;
+   color: inherit;
+   border: none;
+   padding: 0;
+   font: inherit;
+   cursor: pointer;
+   outline:inherit;
+   text-decoration: underline;
+   margin-left: 1em;
+
+ }
+
+
+ #first  .dossier:hover, #first .document:hover {
+   background-color: #eee;
+   cursor: pointer;
+ }
+
+ .selected-item {
+   background-color: #B6A38F !important;
+ }
+
+ /* Fenêtre pour l'upload */
+
+ /* The modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#logo a{
+  text-decoration: none;
+  color: white
+}

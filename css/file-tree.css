@@ -1,0 +1,111 @@
+#first ul{
+  display:inline-block; 0position: relative; float: left; clear: left;
+	margin:.25em;
+	padding:0;
+	background: pink;
+}
+#first ul:before{
+	content:""; position: absolute; z-index: 1;
+	top:.25em; right:auto; bottom:0; left: 1.75em;
+	margin: auto;
+	border-right: dotted black .1em;
+	width: 0; height: auto;
+	0background: blue;
+}
+#first ul:after{
+	content: "-"; position: absolute; z-index: 3;
+	top:0; left:-.5em;
+	margin:.65em; padding:0;
+	width:.8em; height: .8em;
+	text-align:center; line-height: .6em; font-size: 1em;
+	background: blue;
+}
+#first ul>li{
+	display: block; position: relative; float: left; clear: both;
+	right:auto;
+	padding-left: 1em;
+	width:auto;
+	text-align: center; color:white;
+	background: gray;
+}
+#first ul>li>input{
+	display:block; position: absolute; float: left; z-index: 4;
+	margin:0 0 0 -1em; padding:0;
+	width:1em; height: 2em;
+	font-size: 1em;
+	opacity: 0;
+	cursor: pointer;
+}
+#first ul>li>input:checked~ul:before{
+	display: none;
+}
+#first ul>li>input:checked~ul:after{
+	content: "+"
+}
+#first ul>li>input:checked~ul *{
+	display: none;
+}
+#first ul>li>span{
+	display: block; position: relative; float: left; z-index: 3;
+	margin:.25em; padding:.25em;
+	background: lightblue;
+}
+#first ul>li>span:after{
+	content: ""; display: block; position: absolute;
+	left:-1em; top:0; bottom:0;
+	margin: auto .25em auto .25em;
+	border-top: dotted black .1em;
+	width: .75em; height: 0;
+
+}
+
+#first ul>li:last-child:before{
+	content: ""; display: block; position: absolute; z-index: 2;
+	top:1em; left:0; bottom:-.25em;
+	width:.75em; height:auto;
+	background:white;
+}
+
+#first #tree{
+	position: relative; font-family: "Georgia";
+  min-width: 700px;
+  flex-grow: 1;
+
+}
+#first #tree:before{
+	left:.5em;
+}
+#first #tree:after{
+	display: none;
+}
+
+/*decoration*/
+#first ul,ul>li:last-child:before{
+	background: white;
+}
+#first ul>li{
+	background: transparent;
+}
+#first ul:after{
+	background: white;
+	color: black;
+	border:solid gray 1px;
+	border-radius: .1em;
+}
+#first ul>li>span{
+	border-radius: .25em;
+	color: black;
+	background: white;
+}
+#first ul>li>input~span:before{
+	content:""; display: inline-block;
+	margin: 0 .25em  0 0;
+	width:1em; height: 1em; ;line-height: 1em;
+  background-image: url("../assets/img/dossier-ouvert.ico");
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+#first ul>li>input:checked~span:before{
+  background-image: url("../assets/img/dossier-fermer.ico");
+
+}
